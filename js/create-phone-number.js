@@ -11,6 +11,18 @@ Don't forget the space after the closing parenthesis!
 
 */
 
+
+
+// current solution
+function createPhoneNumber(numbers) {
+  let phoneFormat = "(xxx) xxx-xxxx"
+  
+  for (let i = 0; i < numbers.length; i++) {
+    phoneFormat = phoneFormat.replace("x", numbers[i])
+  }
+  return phoneFormat
+}
+
 function createPhoneNumber(numbers){
   let phoneNumber = ""
   for (let i = 0; i < numbers.length; i++) {
@@ -21,3 +33,5 @@ function createPhoneNumber(numbers){
   }
   return phoneNumber
 }
+
+
