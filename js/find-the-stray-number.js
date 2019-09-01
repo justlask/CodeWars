@@ -12,3 +12,9 @@ Examples
 [1, 1, 2] ==> 2
 [17, 17, 3, 17, 17, 17, 17] ==> 3
 */
+
+function stray(numbers) {
+  numbers.sort((a,b) => {return a - b})
+  if (numbers[0] !== numbers[1] && numbers[0] !== numbers[numbers.length-1]) return numbers[0]
+  else return numbers[numbers.length-1]
+}
