@@ -1,0 +1,29 @@
+//STRING TRANSFORMER
+// 6kyu
+
+
+// Given a string, return a new string that has transformed based on the input:
+
+// Change case of every character, ie. lower case to upper case, upper case to lower case.
+// Reverse the order of words from the input.
+// Note: You will have to handle multiple spaces, and leading/trailing spaces.
+
+// For example:
+
+// "Example Input" ==> "iNPUT eXAMPLE"
+// You may assume the input only contain English alphabet and spaces.
+
+
+
+//would probably be better with the ? : syntax
+
+function stringTransformer(str) {
+  // Your code here
+  return str.split(" ").reverse().join(" ").split("").map(char => {
+  if (char === " ") return " "
+  if (char.toLowerCase() === char) {
+    return char.toUpperCase() 
+  }
+  else return char.toLowerCase()
+  }).join("")
+}
