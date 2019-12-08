@@ -28,3 +28,18 @@ def is_isogram(string)
   end
   
 end
+
+
+=begin
+
+just learned about .chars .uniq
+
+that is easy and clean :O
+=end
+
+def is_isogram(string) 
+
+  string.downcase.chars.uniq == string.downcase.chars
+
+end
+
